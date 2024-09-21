@@ -1,0 +1,143 @@
+body {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    background-color: #f0f8ff;
+    font-family: Arial, sans-serif;
+    overflow: hidden; /* Evitar scroll */
+    background-color: whitesmoke;
+    flex: content;
+}
+
+
+
+
+.hidden {
+    display: none;
+}
+
+h1, h2 {
+    color: #a31e2f;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #f55ccfef;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    align-items: center;
+}
+
+button:hover {
+    background-color: #356fc7;
+}
+
+img {
+    margin: 20px 0;
+}
+
+.hidden {
+    display: none;
+}
+
+
+.flower-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+}
+
+.flower {
+    width: 100px;
+    height: 100px;
+    margin: 10px;
+    position: absolute;
+    opacity: 0;
+    animation: fadeInFlower 1s ease-in-out forwards;
+}
+
+.petal {
+    width: 45px;
+    height: 90px;
+    background-color: #FFD700;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform-origin: 0 100%;
+}
+
+.ratita {
+    position: fixed;
+    bottom: 0;
+    left: 10%;
+    width: 100px;
+    height: 100px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    animation: saltar 1s infinite;
+}
+
+@keyframes saltar {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-50px);}
+    100% { transform: translateY(0);}
+    }
+
+.p1 { transform: translate(-50%, -50%) rotate(0deg); }
+.p2 { transform: translate(-50%, -50%) rotate(36deg); }
+.p3 { transform: translate(-50%, -50%) rotate(72deg); }
+.p4 { transform: translate(-50%, -50%) rotate(108deg); }
+.p5 { transform: translate(-50%, -50%) rotate(144deg); }
+.p6 { transform: translate(-50%, -50%) rotate(180deg); }
+.p7 { transform: translate(-50%, -50%) rotate(216deg); }
+.p8 { transform: translate(-50%, -50%) rotate(252deg); }
+.p9 { transform: translate(-50%, -50%) rotate(288deg); }
+.p10 { transform: translate(-50%, -50%) rotate(324deg); }
+
+@keyframes fadeInFlower {
+    0% {
+        opacity: 0;
+        transform: scale(0.5) translateY(-100px);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+}
+
+@keyframes fadeOutFlower {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+}
+
+@keyframes fadeInPetal {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeOutPetal {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+.petal {
+    animation: fadeInPetal 0.5s ease-in-out both;
+}
